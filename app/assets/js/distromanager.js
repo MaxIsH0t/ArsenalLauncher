@@ -542,7 +542,7 @@ exports.pullRemote = function(){
     }
     return new Promise((resolve, reject) => {
         // THIS IS IMPORTANT STUF!!!
-        const distroURL = 'https://arsenalnetwork.net/an/testing/distribution.json'
+        const distroURL = 'https://arsenalnetwork.net/distribution.json'
         //const distroURL = 'https://gist.githubusercontent.com/dscalzi/53b1ba7a11d26a5c353f9d5ae484b71b/raw/'
         const opts = {
             url: distroURL,
