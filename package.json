@@ -1,0 +1,105 @@
+{
+  "name": "arsenalnetworklauncher",
+  "version": "1.6.0",
+  "productName": "ArsenalNetwork Launcher",
+  "description": "ArsenalNetwork Launcher",
+  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/WesterosCraftCode/ElectronLauncher",
+  "bugs": {
+    "url": "https://github.com/WesterosCraftCode/ElectronLauncher/issues"
+  },
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "cilinux": "electron-builder --linux --win",
+    "cidarwin": "electron-builder --mac",
+    "dist": "cross-env ELECTRON_BUILDER_ALLOW_UNRESOLVED_DEPENDENCIES=true electron-builder",
+    "dist:win": "npm run dist -- --win --x64",
+    "dist:mac": "npm run dist -- --mac",
+    "dist:linux": "npm run dist -- --linux --x64",
+    "lint": "eslint --config .eslintrc.json ."
+  },
+  "engines": {
+    "node": "10.x.x"
+  },
+  "dependencies": {
+    "adm-zip": "^0.4.13",
+    "async": "^3.0.1-0",
+    "discord-rpc": "github:discordjs/RPC",
+    "ejs": "^2.6.1",
+    "ejs-electron": "^2.0.3",
+    "electron-updater": "^4.0.6",
+    "fs-extra": "^7.0.1",
+    "github-syntax-dark": "^0.5.0",
+    "jquery": "^3.3.1",
+    "request": "^2.88.0",
+    "semver": "^5.6.0",
+    "tar-fs": "^2.0.0",
+    "winreg": "^1.2.4"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^4.0.5",
+    "electron-builder": "^20.38.5",
+    "eslint": "^5.14.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WesterosCraftCode/ElectronLauncher.git"
+  },
+  "build": {
+    "appId": "arsenalnetworklauncher",
+    "productName": "ArsenalNetwork Launcher",
+    "artifactName": "${productName}.${ext}",
+    "copyright": "Copyright © 2019 ArsenalNetwork",
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": "x64"
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "allowToChangeInstallationDirectory": true
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.games",
+      "icon": "build/icon.icns"
+    },
+    "linux": {
+      "target": "AppImage",
+      "maintainer": "MaxIsH0t",
+      "vendor": "ArsenalNetwork",
+      "synopsis": "Custom Launcher for ArsenalNetwork",
+      "description": "Custom launcher which allows users to join ArsenalNetwork's Modpacks & Servers. All mods, configurations, and updates are handled automatically.",
+      "category": "Game"
+    },
+    "deb": {
+      "compression": "xz",
+      "packageCategory": "Games",
+      "priority": "optional"
+    },
+    "compression": "maximum",
+    "files": [
+      "!{dist,.gitignore,.vscode,docs,dev-app-update.yml,.travis.yml,.nvmrc,.eslintrc.json}"
+    ],
+    "extraResources": [
+      "libraries"
+    ],
+    "asar": true
+  }
+}
