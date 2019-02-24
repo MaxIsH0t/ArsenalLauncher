@@ -551,7 +551,7 @@ function dlAsync(login = true){
                 case 'files':
                     setLaunchPercentage(100, 100)
                     loggerLaunchSuite.log('File validation complete.')
-                    setLaunchDetails('Downloading files..')
+                    setLaunchDetails("Stuck? Close & try again")
                     break
             }
         } else if(m.context === 'progress'){
