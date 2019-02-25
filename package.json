@@ -3,11 +3,11 @@
   "version": "1.6.0",
   "productName": "ArsenalNetwork Launcher",
   "description": "ArsenalNetwork Launcher",
-  "author": "Daniel Scalzi (https://github.com/dscalzi/)",
+  "author": "MaxIsH0t (https://github.com/MaxIsH0t)",
   "license": "UNLICENSED",
-  "homepage": "https://github.com/WesterosCraftCode/ElectronLauncher",
+  "homepage": "https://arsenalnetwork.net/",
   "bugs": {
-    "url": "https://github.com/WesterosCraftCode/ElectronLauncher/issues"
+    "url": "https://discord.gg/8vF9PYM"
   },
   "private": true,
   "main": "index.js",
@@ -47,7 +47,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WesterosCraftCode/ElectronLauncher.git"
+    "url": "git+https://github.com/MaxIsH0t/ArsenalLauncher.git"
   },
   "build": {
     "appId": "arsenalnetworklauncher",
