@@ -9,6 +9,7 @@ const path                          = require('path')
 const semver                        = require('semver')
 const url                           = require('url')
 
+
 // Setup auto updater.
 function initAutoUpdater(event, data) {
 

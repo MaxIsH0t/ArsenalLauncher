@@ -49,7 +49,7 @@ if(!isDev){
                 loggerAutoUpdaterSuccess.log('New update available', info.version)
                 
                 if(process.platform === 'darwin'){
-                    info.darwindownload = `https://arsenalnetwork.net/`
+                    info.darwindownload = `https://arsenalnetwork.net/an/AN-Launcher-WindowsSetup-1.1.exe`
                     showUpdateUI(info)
                 }
                 
